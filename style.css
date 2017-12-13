@@ -36,3 +36,23 @@ body{
   border:5px solid black;
   clear: both;
 }
+
+.playerInput {
+  margin:5px;
+}
+
+.playerInput > input {
+  margin:5px;
+}
+
+.hidePlayerInput {
+  visibility: hidden;
+}
+
+.turnsBox{
+  visibility: hidden
+}
+
+.turnsBoxShow{
+  visibility: visible;
+}
