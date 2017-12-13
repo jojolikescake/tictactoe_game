@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  text-align: center;
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.column{
+  display:flex;
+  flex-direction: column;
+}
+
+.box {
+  background-color: mistyrose;
+  width:200px;
+  height:200px;
+}
+
+.nought{
+  background-image: url('images/o.png')
+}
+
+.cross{
+  background-image: url('images/X.png')
+}
+
+.winnerbox{
+  border:5px solid black;
+  clear: both;
+}
