@@ -8,6 +8,7 @@ var player2Element = document.querySelector('input[name="player2name"]');
 var turnsBoxElement = document.querySelector('.turnsBox')
 var playerTurn ="A"
 var turnsArray = [0,0,0,0,0,0,0,0,0]
+var winnerBoxElement = document.querySelector(".winnerbox")
 
 playerNameSubmit.addEventListener('click', storeNames)
 
@@ -53,68 +54,84 @@ function gameLogic(){
 
   //left column of noughts
    if (turnsArray[0]===1 && turnsArray[1]===1 && turnsArray[2]===1){
-    document.querySelector(".winnerbox").textContent=player1Input+" wins!"
+    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+    winnerBoxElement.classList.add("winnerBoxShow")
   }
    //middle column of noughts
    else if (turnsArray[3]===1 && turnsArray[4]===1 && turnsArray[5]===1){
-    document.querySelector(".winnerbox").textContent=player1Input+" wins!"
+    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+    winnerBoxElement.classList.add("winnerBoxShow")
   }
   //right column of noughts
    else if (turnsArray[6]===1 && turnsArray[7]===1 && turnsArray[8]===1){
-  document.querySelector(".winnerbox").textContent=player1Input+" wins!"
+  document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+  winnerBoxElement.classList.add("winnerBoxShow")
   }
   //left column of crosses
   else if (turnsArray[0]===2 && turnsArray[1]===2 && turnsArray[2]===2){
-    document.querySelector(".winnerbox").textContent="Player 2 wins!"
+    document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+    winnerBoxElement.classList.add("winnerBoxShow")
   }
    //middle column of crosses 
   else if (turnsArray[3]===2 && turnsArray[4]===2 && turnsArray[5]===2){
-    document.querySelector(".winnerbox").textContent="Player 2 wins!"
+    document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+    winnerBoxElement.classList.add("winnerBoxShow")
   }
   //right column of crosses
    else if (turnsArray[6]===2 && turnsArray[7]===2 && turnsArray[8]===2){
-  document.querySelector(".winnerbox").textContent="Player 2 wins!"
+  document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+  winnerBoxElement.classList.add("winnerBoxShow")
   }
 
   //top row of noughts
   else if (turnsArray[0]===1 && turnsArray[3]===1 && turnsArray[6]===1){
    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+   winnerBoxElement.classList.add("winnerBoxShow") 
   }
   //middle row of noughts
   else if (turnsArray[1]===1 && turnsArray[4]===1 && turnsArray[7]===1){
     document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+    winnerBoxElement.classList.add("winnerBoxShow") 
   }
   //bottom row of noughts
   else if (turnsArray[2]===1 && turnsArray[5]===1 && turnsArray[8]===1){
     document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+    winnerBoxElement.classList.add("winnerBoxShow") 
   }
   //top row of crosses
   else if (turnsArray[0]===2 && turnsArray[3]===2 && turnsArray[6]===2){
-    document.querySelector(".winnerbox").textContent="Player 2 wins!"
+    document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+    winnerBoxElement.classList.add("winnerBoxShow")
   }
   //middle row of crosses
   else if (turnsArray[1]===2 && turnsArray[4]===2 && turnsArray[7]===2){
-    document.querySelector(".winnerbox").textContent="Player 2 wins!" 
+    document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+    winnerBoxElement.classList.add("winnerBoxShow") 
   }
   //bottom row of crosses
   else if (turnsArray[2]===2 && turnsArray[5]===2 && turnsArray[8]===2){
-    document.querySelector(".winnerbox").textContent="Player 2 wins!" 
+    document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+    winnerBoxElement.classList.add("winnerBoxShow") 
   }
   // diagonal left down of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+   winnerBoxElement.classList.add("winnerBoxShow") 
   }
   //diagonal left up of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
+   winnerBoxElement.classList.add("winnerBoxShow") 
   }
   // diagonal left down of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
-   document.querySelector(".winnerbox").textContent="Player 2 wins!" 
+   document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+   winnerBoxElement.classList.add("winnerBoxShow") 
   }
   //diagonal left up of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
-   document.querySelector(".winnerbox").textContent="Player 2 wins!" 
+   document.querySelector(".winnerbox").textContent=player2Input+" wins!"
+   winnerBoxElement.classList.add("winnerBoxShow") 
   }
   //if its a draw
   else if(turnsArray.reduce(function getSum(total, num) {return total + num})===13){
