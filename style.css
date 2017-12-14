@@ -25,11 +25,11 @@ main {
   background-color: #5DBCD2;
   width:200px;
   height:200px;
+  border-radius: 20px;
 }
 
 .nought{
   background-image: url('images/o2.gif');
-  transition: 1s;
 }
 
 .cross{
@@ -39,7 +39,6 @@ main {
 
 
 .winnerbox{
-  border:1px solid black;
   clear: both;
   width:50%;
   margin: 0 auto;
@@ -75,12 +74,16 @@ main {
   background-color: grey;
   width:10%;
   margin:30px;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .player2Score{
   background-color: grey;
   width:10%;
   margin:30px;
+  text-align: center;
+  border-radius: 20px;
 }
 
 input[type=submit]{
@@ -88,11 +91,11 @@ input[type=submit]{
 }
 
 .scoreBox1{
-  width:50%;
-  border: 2px solid darkgrey;
+  width:100%;
+
 }
 
 .scoreBox2{
-  width:50%;
-  border: 2px solid darkgrey;
+  width:100%;
+
 }
