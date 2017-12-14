@@ -28,7 +28,8 @@ main {
 }
 
 .nought{
-  background-image: url('images/o2.gif')
+  background-image: url('images/o2.gif');
+  transition: 1s;
 }
 
 .cross{

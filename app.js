@@ -64,10 +64,10 @@ function gameLogic(){
    if (turnsArray[0]===1 && turnsArray[1]===1 && turnsArray[2]===1){
     document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
     winnerBoxElement.classList.add("winnerBoxShow")
-    player1Score= player1Score+1
-    console.log(player1Score)
+    player1Score+=1
     player1ScoreElement.textContent= player1Score
     clearAllBoxes()
+    clearBoardArray()
 
 
   }
@@ -75,88 +75,157 @@ function gameLogic(){
    else if (turnsArray[3]===1 && turnsArray[4]===1 && turnsArray[5]===1){
     document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
     winnerBoxElement.classList.add("winnerBoxShow")
+    player1Score+=1
+    player1ScoreElement.textContent= player1Score
+    clearAllBoxes()
+    clearBoardArray()
   }
   //right column of noughts
    else if (turnsArray[6]===1 && turnsArray[7]===1 && turnsArray[8]===1){
   document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
   winnerBoxElement.classList.add("winnerBoxShow")
+  player1Score+=1
+  player1ScoreElement.textContent= player1Score
+  clearAllBoxes()
+  clearBoardArray()
   }
   //left column of crosses
   else if (turnsArray[0]===2 && turnsArray[1]===2 && turnsArray[2]===2){
     document.querySelector(".winnerbox").textContent=player2Input+" wins!"
     winnerBoxElement.classList.add("winnerBoxShow")
+    player2Score+=1
+    player2ScoreElement.textContent= player2Score
+    clearAllBoxes()
+    clearBoardArray()
   }
    //middle column of crosses 
   else if (turnsArray[3]===2 && turnsArray[4]===2 && turnsArray[5]===2){
     document.querySelector(".winnerbox").textContent=player2Input+" wins!"
     winnerBoxElement.classList.add("winnerBoxShow")
+    player2Score+=1
+    player2ScoreElement.textContent= player2Score
+    clearAllBoxes()
+    clearBoardArray()
   }
   //right column of crosses
    else if (turnsArray[6]===2 && turnsArray[7]===2 && turnsArray[8]===2){
   document.querySelector(".winnerbox").textContent=player2Input+" wins!"
   winnerBoxElement.classList.add("winnerBoxShow")
+  player2Score+=1
+  player2ScoreElement.textContent= player2Score
+  clearAllBoxes()
+  clearBoardArray()
   }
 
   //top row of noughts
   else if (turnsArray[0]===1 && turnsArray[3]===1 && turnsArray[6]===1){
    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
    winnerBoxElement.classList.add("winnerBoxShow") 
+  player1Score+=1
+  player1ScoreElement.textContent= player1Score
+  clearAllBoxes()
+  clearBoardArray()
   }
   //middle row of noughts
   else if (turnsArray[1]===1 && turnsArray[4]===1 && turnsArray[7]===1){
     document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
     winnerBoxElement.classList.add("winnerBoxShow") 
+    player1Score+=1
+    player1ScoreElement.textContent= player1Score
+    clearAllBoxes()
+    clearBoardArray()
   }
   //bottom row of noughts
   else if (turnsArray[2]===1 && turnsArray[5]===1 && turnsArray[8]===1){
     document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
     winnerBoxElement.classList.add("winnerBoxShow") 
+    winnerBoxElement.classList.add("winnerBoxShow") 
+    player1Score+=1
+    player1ScoreElement.textContent= player1Score
+    clearAllBoxes()
+    clearBoardArray()
   }
   //top row of crosses
   else if (turnsArray[0]===2 && turnsArray[3]===2 && turnsArray[6]===2){
     document.querySelector(".winnerbox").textContent=player2Input+" wins!"
     winnerBoxElement.classList.add("winnerBoxShow")
+    player2Score+=1
+    player2ScoreElement.textContent= player2Score
+    clearAllBoxes()
+    clearBoardArray()
   }
   //middle row of crosses
   else if (turnsArray[1]===2 && turnsArray[4]===2 && turnsArray[7]===2){
     document.querySelector(".winnerbox").textContent=player2Input+" wins!"
     winnerBoxElement.classList.add("winnerBoxShow") 
+    player2Score+=1
+    player2ScoreElement.textContent= player2Score
+    clearAllBoxes()
+    clearBoardArray()
   }
   //bottom row of crosses
   else if (turnsArray[2]===2 && turnsArray[5]===2 && turnsArray[8]===2){
     document.querySelector(".winnerbox").textContent=player2Input+" wins!"
     winnerBoxElement.classList.add("winnerBoxShow") 
+    player2Score+=1
+    player2ScoreElement.textContent= player2Score
+    clearAllBoxes()
+    clearBoardArray()
   }
   // diagonal left down of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
    winnerBoxElement.classList.add("winnerBoxShow") 
+   player1Score+=1
+   player1ScoreElement.textContent= player1Score
+   clearAllBoxes()
+   clearBoardArray()
   }
   //diagonal left up of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
    document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
    winnerBoxElement.classList.add("winnerBoxShow") 
+   player1Score+=1
+   player1ScoreElement.textContent= player1Score
+   clearAllBoxes()
+   clearBoardArray()
   }
   // diagonal left down of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
    document.querySelector(".winnerbox").textContent=player2Input+" wins!"
    winnerBoxElement.classList.add("winnerBoxShow") 
+   player2Score+=1
+   player2ScoreElement.textContent= player2Score
+   clearAllBoxes()
+   clearBoardArray()
   }
   //diagonal left up of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
    document.querySelector(".winnerbox").textContent=player2Input+" wins!"
    winnerBoxElement.classList.add("winnerBoxShow") 
+   player2Score+=1
+   player2ScoreElement.textContent= player2Score
+   clearAllBoxes()
+   clearBoardArray()
   }
   //if its a draw
   else if(turnsArray.reduce(function getSum(total, num) {return total + num})===13){
     document.querySelector(".winnerbox").textContent="It's a draw" 
-    winnerBoxElement.classList.add("winnerBoxShow") 
+    winnerBoxElement.classList.add("winnerBoxShow")
+    clearAllBoxes()
+    clearBoardArray() 
   }
 }
 
 function clearAllBoxes(){
   allBoxes.forEach(function(elem){
-    elem.classList.remove("nought")
-    elem.classList.remove("cross")
+  setTimeout(function(){elem.classList.remove("nought") }, 1000);
+   setTimeout(function(){ elem.classList.remove("cross") }, 1000);
   })
+}
+
+function clearBoardArray(){ turnsArray=[] 
+  turnsArray.length=9
+  turnsArray.fill(0)
+  //turnsArray.forEach(function(i){turnsArray= })
 }
