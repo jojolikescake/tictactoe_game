@@ -4,9 +4,12 @@
 
 body{
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  color:#052e40;
+
 }
 
-.container{
+main {
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -19,17 +22,17 @@ body{
 }
 
 .box {
-  background-color: mistyrose;
+  background-color: #5DBCD2;
   width:200px;
   height:200px;
 }
 
 .nought{
-  background-image: url('images/o.png')
+  background-image: url('images/o2.gif')
 }
 
 .cross{
-  background-image: url('images/X.png')
+  background-image: url('images/x2.gif')
 }
 
 
@@ -56,7 +59,7 @@ body{
 }
 
 .hidePlayerInput {
-  visibility: hidden;
+  display:none;
 }
 
 .turnsBox{
@@ -65,4 +68,30 @@ body{
 
 .turnsBoxShow{
   visibility: visible;
+}
+
+.player1Score{
+  background-color: grey;
+  width:10%;
+  margin:30px;
+}
+
+.player2Score{
+  background-color: grey;
+  width:10%;
+  margin:30px;
+}
+
+input[type=submit]{
+    font-family: 'Lato', sans-serif;
+}
+
+.scoreBox1{
+  width:50%;
+  border: 2px solid darkgrey;
+}
+
+.scoreBox2{
+  width:50%;
+  border: 2px solid darkgrey;
 }

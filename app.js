@@ -9,12 +9,20 @@ var turnsBoxElement = document.querySelector('.turnsBox')
 var playerTurn ="A"
 var turnsArray = [0,0,0,0,0,0,0,0,0]
 var winnerBoxElement = document.querySelector(".winnerbox")
+var player1Score = 0
+var player2Score = 0
+var player1ScoreElement = document.querySelector(".scoreBox1")
+var player2ScoreElement = document.querySelector(".scoreBox2")
+var allBoxes = document.querySelectorAll(".box")
+
 
 playerNameSubmit.addEventListener('click', storeNames)
 
 box.forEach(function(elem){
   elem.addEventListener('click',addMark)
 })
+
+
 
 function storeNames (event){
   player1Input = player1Element.value
@@ -56,6 +64,12 @@ function gameLogic(){
    if (turnsArray[0]===1 && turnsArray[1]===1 && turnsArray[2]===1){
     document.querySelector(".winnerbox").textContent=player1Input+" wins!" 
     winnerBoxElement.classList.add("winnerBoxShow")
+    player1Score= player1Score+1
+    console.log(player1Score)
+    player1ScoreElement.textContent= player1Score
+    clearAllBoxes()
+
+
   }
    //middle column of noughts
    else if (turnsArray[3]===1 && turnsArray[4]===1 && turnsArray[5]===1){
@@ -136,5 +150,13 @@ function gameLogic(){
   //if its a draw
   else if(turnsArray.reduce(function getSum(total, num) {return total + num})===13){
     document.querySelector(".winnerbox").textContent="It's a draw" 
+    winnerBoxElement.classList.add("winnerBoxShow") 
   }
+}
+
+function clearAllBoxes(){
+  allBoxes.forEach(function(elem){
+    elem.classList.remove("nought")
+    elem.classList.remove("cross")
+  })
 }
