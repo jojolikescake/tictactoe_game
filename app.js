@@ -193,11 +193,19 @@ function clearBoardArray(){ turnsArray=[]
 
 function playerWins(player){
   if (player === 1){
+   player1ScoreElement.classList.add("flash")
+   setTimeout(function(){player1ScoreElement.classList.remove("flash") }, 2000);
+   winnerBoxElementh2.classList.add("rubberBand")
+   setTimeout(function(){player1ScoreElement.classList.remove("rubberBand") }, 2000);
    winnerBoxElementh2.textContent=player1Input+" wins!"
    player1Score+=1
    player1ScoreBoxElement.textContent= player1Score
   }
   else {
+    player2ScoreElement.classList.add("flash")
+   setTimeout(function(){player2ScoreElement.classList.remove("flash") }, 2000);
+   winnerBoxElementh2.classList.add("rubberBand")
+   setTimeout(function(){player1ScoreElement.classList.remove("rubberBand") }, 2000);
     winnerBoxElementh2.textContent=player2Input+" wins!"
     player2Score+=1
     player2ScoreBoxElement.textContent= player2Score
