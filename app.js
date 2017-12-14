@@ -35,22 +35,23 @@ function storeNames (event){
 
 function addMark(event){
 
-  if (playerTurn==='A'){  
-    event.target.classList.add("nought")
+  if (playerTurn==='A'&& event.target.style.backgroundImage ===""){  
+   event.target.style.backgroundImage = "url('images/o2.gif')"
     playerTurn='B'
     document.querySelector("h2").textContent= player2Input+" \'s turn"
     turnsArray[event.target.getAttribute('data-cell')]=1 
     console.log(turnsArray)
   }  
 
-  else if (playerTurn==='B'){
-    event.target.classList.add("cross");
+  else if (playerTurn==='B'&& event.target.style.backgroundImage ===""){
+   
+    event.target.style.backgroundImage = "url('images/x2.gif')"
     playerTurn='A'
     document.querySelector("h2").textContent=player1Input+" \'s turn"
     turnsArray[event.target.getAttribute('data-cell')]=2
     console.log(turnsArray)
   }
-
+  
   gameLogic()
 }
 
@@ -229,3 +230,9 @@ function clearBoardArray(){ turnsArray=[]
   turnsArray.fill(0)
   //turnsArray.forEach(function(i){turnsArray= })
 }
+
+//function preventOverwrite(){
+  //if (event.target.classList==="box nought"|| event.target.classList==="box cross"){
+    //event.target.removeEventListener('click')
+//  }
+//}
