@@ -34,25 +34,26 @@ function storeNames (event){
 
 
 function addMark(event){
+  if (player1Input!==""&& player2Input!==""){
+    if (playerTurn==='A'&& event.target.style.backgroundImage ===""){  
+     event.target.style.backgroundImage = "url('images/o2.gif')"
+      playerTurn='B'
+      document.querySelector("h2").textContent= player2Input+" \'s turn"
+      turnsArray[event.target.getAttribute('data-cell')]=1 
+      console.log(turnsArray)
+    }  
 
-  if (playerTurn==='A'&& event.target.style.backgroundImage ===""){  
-   event.target.style.backgroundImage = "url('images/o2.gif')"
-    playerTurn='B'
-    document.querySelector("h2").textContent= player2Input+" \'s turn"
-    turnsArray[event.target.getAttribute('data-cell')]=1 
-    console.log(turnsArray)
-  }  
-
-  else if (playerTurn==='B'&& event.target.style.backgroundImage ===""){
-   
-    event.target.style.backgroundImage = "url('images/x2.gif')"
-    playerTurn='A'
-    document.querySelector("h2").textContent=player1Input+" \'s turn"
-    turnsArray[event.target.getAttribute('data-cell')]=2
-    console.log(turnsArray)
-  }
+    else if (playerTurn==='B'&& event.target.style.backgroundImage ===""){
+     
+      event.target.style.backgroundImage = "url('images/x2.gif')"
+      playerTurn='A'
+      document.querySelector("h2").textContent=player1Input+" \'s turn"
+      turnsArray[event.target.getAttribute('data-cell')]=2
+      console.log(turnsArray)
+    }
   
   gameLogic()
+  }
 }
 
 
