@@ -215,13 +215,16 @@ function gameLogic(){
     winnerBoxElement.classList.add("winnerBoxShow")
     clearAllBoxes()
     clearBoardArray() 
+  
   }
+
+
 }
 
 function clearAllBoxes(){
   allBoxes.forEach(function(elem){
-  setTimeout(function(){elem.classList.remove("nought") }, 1000);
-   setTimeout(function(){ elem.classList.remove("cross") }, 1000);
+  setTimeout(function(){elem.style.backgroundImage = "" }, 1000);
+   setTimeout(function(){elem.style.backgroundImage = ""}, 1000);
   })
 }
 
