@@ -23,8 +23,8 @@ main {
 
 .box {
   background-color: #5DBCD2;
-  width:200px;
-  height:200px;
+  width:12em;
+  height:12em;
   border-radius: 20px;
 }
 
@@ -99,3 +99,5 @@ input[type=submit]{
   width:100%;
 
 }
+
+
