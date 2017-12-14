@@ -69,10 +69,7 @@ function gameLogic(){
 
   //left column of noughts
    if (turnsArray[0]===1 && turnsArray[1]===1 && turnsArray[2]===1){
-    winnerBoxElementh2.textContent=player1Input+" wins!" 
-    winnerBoxElement.classList.add("winnerBoxShow")
-    player1Score+=1
-    player1ScoreBoxElement.textContent= player1Score
+    playerWins(1)
     clearAllBoxes()
     clearBoardArray()
 
@@ -80,140 +77,94 @@ function gameLogic(){
   }
    //middle column of noughts
    else if (turnsArray[3]===1 && turnsArray[4]===1 && turnsArray[5]===1){
-    winnerBoxElementh2.textContent=player1Input+" wins!" 
-    winnerBoxElement.classList.add("winnerBoxShow")
-    player1Score+=1
-    player1ScoreBoxElement.textContent= player1Score
+    playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //right column of noughts
    else if (turnsArray[6]===1 && turnsArray[7]===1 && turnsArray[8]===1){
-  winnerBoxElementh2.textContent=player1Input+" wins!" 
-  winnerBoxElement.classList.add("winnerBoxShow")
-  player1Score+=1
-  player1ScoreBoxElement.textContent= player1Score
-  clearAllBoxes()
-  clearBoardArray()
+    playerWins(1)
+    clearAllBoxes()
+    clearBoardArray()
   }
   //left column of crosses
   else if (turnsArray[0]===2 && turnsArray[1]===2 && turnsArray[2]===2){
-    winnerBoxElementh2.textContent=player2Input+" wins!"
-    winnerBoxElement.classList.add("winnerBoxShow")
-    player2Score+=1
-    player2ScoreBoxElement.textContent= player2Score
+    playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
    //middle column of crosses 
   else if (turnsArray[3]===2 && turnsArray[4]===2 && turnsArray[5]===2){
-    winnerBoxElementh2.textContent=player2Input+" wins!"
-    winnerBoxElement.classList.add("winnerBoxShow")
-    player2Score+=1
-    player2ScoreBoxElement.textContent= player2Score
+    playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   //right column of crosses
    else if (turnsArray[6]===2 && turnsArray[7]===2 && turnsArray[8]===2){
-  winnerBoxElementh2.textContent=player2Input+" wins!"
-  winnerBoxElement.classList.add("winnerBoxShow")
-  player2Score+=1
-  player2ScoreBoxElement.textContent= player2Score
-  clearAllBoxes()
-  clearBoardArray()
+    playerWins(2)
+    clearAllBoxes()
+    clearBoardArray()
   }
 
   //top row of noughts
   else if (turnsArray[0]===1 && turnsArray[3]===1 && turnsArray[6]===1){
-   winnerBoxElementh2.textContent=player1Input+" wins!" 
-   winnerBoxElement.classList.add("winnerBoxShow") 
-  player1Score+=1
-  player1ScoreBoxElement.textContent= player1Score
-  clearAllBoxes()
-  clearBoardArray()
+    playerWins(1)
+    clearAllBoxes()
+    clearBoardArray()
   }
   //middle row of noughts
   else if (turnsArray[1]===1 && turnsArray[4]===1 && turnsArray[7]===1){
-    winnerBoxElementh2.textContent=player1Input+" wins!" 
-    winnerBoxElement.classList.add("winnerBoxShow") 
-    player1Score+=1
-    player1ScoreBoxElement.textContent= player1Score
+    playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //bottom row of noughts
   else if (turnsArray[2]===1 && turnsArray[5]===1 && turnsArray[8]===1){
-    winnerBoxElementh2.textContent=player1Input+" wins!" 
-    winnerBoxElement.classList.add("winnerBoxShow") 
-    winnerBoxElement.classList.add("winnerBoxShow") 
-    player1Score+=1
-    player1ScoreBoxElement.textContent= player1Score
+    playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //top row of crosses
   else if (turnsArray[0]===2 && turnsArray[3]===2 && turnsArray[6]===2){
-    winnerBoxElementh2.textContent=player2Input+" wins!"
-    winnerBoxElement.classList.add("winnerBoxShow")
-    player2Score+=1
-    player2ScoreBoxElement.textContent= player2Score
+    playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   //middle row of crosses
   else if (turnsArray[1]===2 && turnsArray[4]===2 && turnsArray[7]===2){
-    winnerBoxElementh2.textContent=player2Input+" wins!"
-    winnerBoxElement.classList.add("winnerBoxShow") 
-    player2Score+=1
-    player2ScoreBoxElement.textContent= player2Score
+    playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   //bottom row of crosses
   else if (turnsArray[2]===2 && turnsArray[5]===2 && turnsArray[8]===2){
-    winnerBoxElementh2.textContent=player2Input+" wins!"
-    winnerBoxElement.classList.add("winnerBoxShow") 
-    player2Score+=1
-    player2ScoreBoxElement.textContent= player2Score
+    playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   // diagonal left down of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
-   winnerBoxElementh2.textContent=player1Input+" wins!" 
-   winnerBoxElement.classList.add("winnerBoxShow") 
-   player1Score+=1
-   player1ScoreBoxElement.textContent= player1Score
-   clearAllBoxes()
-   clearBoardArray()
+    playerWins(1)
+    clearAllBoxes()
+    clearBoardArray()
   }
   //diagonal left up of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
-   winnerBoxElementh2.textContent=player1Input+" wins!" 
-   winnerBoxElement.classList.add("winnerBoxShow") 
-   player1Score+=1
-   player1ScoreBoxElement.textContent= player1Score
-   clearAllBoxes()
-   clearBoardArray()
+    playerWins(1)
+    clearAllBoxes()
+    clearBoardArray()
   }
   // diagonal left down of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
-   winnerBoxElementh2.textContent=player2Input+" wins!"
-   winnerBoxElement.classList.add("winnerBoxShow") 
-   player2Score+=1
-   player2ScoreBoxElement.textContent= player2Score
-   clearAllBoxes()
-   clearBoardArray()
+    playerWins(2)
+    clearAllBoxes()
+    clearBoardArray()
   }
   //diagonal left up of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
-   winnerBoxElementh2.textContent=player2Input+" wins!"
-   winnerBoxElement.classList.add("winnerBoxShow") 
-   player2Score+=1
-   player2ScoreBoxElement.textContent= player2Score
-   clearAllBoxes()
-   clearBoardArray()
+    playerWins(2)
+    clearAllBoxes()
+    clearBoardArray()
   }
   //if its a draw
   else if(turnsArray.reduce(function getSum(total, num) {return total + num})===13){
@@ -238,6 +189,24 @@ function clearBoardArray(){ turnsArray=[]
   turnsArray.length=9
   turnsArray.fill(0)
   //turnsArray.forEach(function(i){turnsArray= })
+}
+
+function playerWins(player){
+  if (player === 1){
+   winnerBoxElementh2.textContent=player1Input+" wins!"
+   player1Score+=1
+   player1ScoreBoxElement.textContent= player1Score
+  }
+  else {
+    winnerBoxElementh2.textContent=player2Input+" wins!"
+    player2Score+=1
+    player2ScoreBoxElement.textContent= player2Score
+
+  }
+
+  winnerBoxElement.classList.add("winnerBoxShow") 
+
+
 }
 
 //function preventOverwrite(){
