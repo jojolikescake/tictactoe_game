@@ -17,13 +17,20 @@ var player2Score = 0
 var player1ScoreElement = document.querySelector(".player1Score h3")
 var player2ScoreElement = document.querySelector(".player2Score h3")
 var allBoxes = document.querySelectorAll(".box")
+var boxArray = document.querySelectorAll('main .box')
+
+
+var box1 = document
 
 
 playerNameSubmit.addEventListener('click', storeNames)
 
 box.forEach(function(elem){
   elem.addEventListener('click',addMark)
+  elem.classList.add('animated')
 })
+
+
 
 
 
@@ -69,6 +76,12 @@ function gameLogic(){
 
   //left column of noughts
    if (turnsArray[0]===1 && turnsArray[1]===1 && turnsArray[2]===1){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[1].classList.add('zoomIn')
+    setTimeout(function(){boxArray[1].classList.remove("zoomIn") }, 2000);
+    boxArray[2].classList.add('zoomIn')
+    setTimeout(function(){boxArray[2].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
@@ -77,30 +90,60 @@ function gameLogic(){
   }
    //middle column of noughts
    else if (turnsArray[3]===1 && turnsArray[4]===1 && turnsArray[5]===1){
+    boxArray[3].classList.add('zoomIn')
+    setTimeout(function(){boxArray[3].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[5].classList.add('zoomIn')
+    setTimeout(function(){boxArray[5].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //right column of noughts
    else if (turnsArray[6]===1 && turnsArray[7]===1 && turnsArray[8]===1){
+    boxArray[6].classList.add('zoomIn')
+    setTimeout(function(){boxArray[6].classList.remove("zoomIn") }, 2000);
+    boxArray[7].classList.add('zoomIn')
+    setTimeout(function(){boxArray[7].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //left column of crosses
   else if (turnsArray[0]===2 && turnsArray[1]===2 && turnsArray[2]===2){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[1].classList.add('zoomIn')
+    setTimeout(function(){boxArray[1].classList.remove("zoomIn") }, 2000);
+    boxArray[2].classList.add('zoomIn')
+    setTimeout(function(){boxArray[2].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
    //middle column of crosses 
   else if (turnsArray[3]===2 && turnsArray[4]===2 && turnsArray[5]===2){
+    boxArray[3].classList.add('zoomIn')
+    setTimeout(function(){boxArray[3].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[5].classList.add('zoomIn')
+    setTimeout(function(){boxArray[5].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   //right column of crosses
    else if (turnsArray[6]===2 && turnsArray[7]===2 && turnsArray[8]===2){
+    boxArray[6].classList.add('zoomIn')
+    setTimeout(function(){boxArray[6].classList.remove("zoomIn") }, 2000);
+    boxArray[7].classList.add('zoomIn')
+    setTimeout(function(){boxArray[7].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
@@ -108,60 +151,120 @@ function gameLogic(){
 
   //top row of noughts
   else if (turnsArray[0]===1 && turnsArray[3]===1 && turnsArray[6]===1){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[3].classList.add('zoomIn')
+    setTimeout(function(){boxArray[3].classList.remove("zoomIn") }, 2000);
+    boxArray[6].classList.add('zoomIn')
+    setTimeout(function(){boxArray[6].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //middle row of noughts
   else if (turnsArray[1]===1 && turnsArray[4]===1 && turnsArray[7]===1){
+    boxArray[1].classList.add('zoomIn')
+    setTimeout(function(){boxArray[1].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[7].classList.add('zoomIn')
+    setTimeout(function(){boxArray[7].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //bottom row of noughts
   else if (turnsArray[2]===1 && turnsArray[5]===1 && turnsArray[8]===1){
+    boxArray[2].classList.add('zoomIn')
+    setTimeout(function(){boxArray[2].classList.remove("zoomIn") }, 2000);
+    boxArray[5].classList.add('zoomIn')
+    setTimeout(function(){boxArray[5].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //top row of crosses
   else if (turnsArray[0]===2 && turnsArray[3]===2 && turnsArray[6]===2){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[3].classList.add('zoomIn')
+    setTimeout(function(){boxArray[3].classList.remove("zoomIn") }, 2000);
+    boxArray[6].classList.add('zoomIn')
+    setTimeout(function(){boxArray[6].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   //middle row of crosses
   else if (turnsArray[1]===2 && turnsArray[4]===2 && turnsArray[7]===2){
+    boxArray[1].classList.add('zoomIn')
+    setTimeout(function(){boxArray[1].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[7].classList.add('zoomIn')
+    setTimeout(function(){boxArray[7].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   //bottom row of crosses
   else if (turnsArray[2]===2 && turnsArray[5]===2 && turnsArray[8]===2){
+    boxArray[2].classList.add('zoomIn')
+    setTimeout(function(){boxArray[2].classList.remove("zoomIn") }, 2000);
+    boxArray[5].classList.add('zoomIn')
+    setTimeout(function(){boxArray[5].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   // diagonal left down of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   //diagonal left up of noughts
   else if (turnsArray[0]===1 && turnsArray[4]===1 && turnsArray[8]===1){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(1)
     clearAllBoxes()
     clearBoardArray()
   }
   // diagonal left down of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
   }
   //diagonal left up of crosses
   else if (turnsArray[0]===2 && turnsArray[4]===2 && turnsArray[8]===2){
+    boxArray[0].classList.add('zoomIn')
+    setTimeout(function(){boxArray[0].classList.remove("zoomIn") }, 2000);
+    boxArray[4].classList.add('zoomIn')
+    setTimeout(function(){boxArray[4].classList.remove("zoomIn") }, 2000);
+    boxArray[8].classList.add('zoomIn')
+    setTimeout(function(){boxArray[8].classList.remove("zoomIn") }, 2000);
     playerWins(2)
     clearAllBoxes()
     clearBoardArray()
@@ -180,8 +283,8 @@ function gameLogic(){
 
 function clearAllBoxes(){
   allBoxes.forEach(function(elem){
-  setTimeout(function(){elem.style.backgroundImage = "" }, 1000);
-   setTimeout(function(){elem.style.backgroundImage = ""}, 1000);
+  setTimeout(function(){elem.style.backgroundImage = "" }, 2000);
+   setTimeout(function(){elem.style.backgroundImage = ""}, 2000);
   })
 }
 
@@ -222,3 +325,4 @@ function playerWins(player){
     //event.target.removeEventListener('click')
 //  }
 //}
+

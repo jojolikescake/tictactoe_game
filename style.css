@@ -16,6 +16,10 @@ main {
   align-items: center;
 }
 
+h3{
+  margin:20px;
+}
+
 .column{
   display:flex;
   flex-direction: column;
